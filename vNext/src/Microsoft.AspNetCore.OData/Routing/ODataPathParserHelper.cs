@@ -70,6 +70,11 @@ namespace Microsoft.AspNetCore.OData.Routing
                 uriParser.UrlKeyDelimiter = ODataUrlKeyDelimiter.Parentheses;
             }
 
+            if (options.EnableCaseInsensitive != null)
+            {
+                uriParser.Resolver.EnableCaseInsensitive = options.EnableCaseInsensitive.Value;
+            }
+
             ODL.ODataPath path;
             UnresolvedPathSegment unresolvedPathSegment = null;
             ODL.KeySegment id = null;

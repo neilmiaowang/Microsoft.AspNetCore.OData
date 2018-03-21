@@ -36,6 +36,11 @@ namespace Microsoft.AspNetCore.OData
         /// </summary>
         public IList<IODataRoutingConvention> RoutingConventions { get; set; }
 
+        /// <summary>
+        /// Gets or sets the case insensitive flag for the Uri parser on the configuration.
+        /// </summary>
+        public bool? EnableCaseInsensitive { get; set; }
+
         // TODO: and more configuration here.
     }
 }
